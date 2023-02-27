@@ -1,12 +1,9 @@
-export default function getSpecialAttack(object) {
+export default function getSpecialAttack({
+  id, name, icon, description = 'Описание недоступно',
+}) {
   const result = [];
-  for (let i = 0; i < object.special.length; i += 1) {
-    const {
-      id, name, icon, description = 'Описание недоступно',
-    } = object.special[i];
-    result.push({
-      id, name, icon, description,
-    });
-  }
+  result.push({
+    id, name, icon, description,
+  });
   return result;
 }

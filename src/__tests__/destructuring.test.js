@@ -24,8 +24,8 @@ test('destructuring test', () => {
     ],
   };
 
-  const data = getSpecialAttack(character);
-  for (let i = 0; i < data.length; i += 1) {
-    expect(Object.keys(data[i]).length).toBe(4);
+  for (let i = 0; i < character.special.length; i += 1) {
+    const data = getSpecialAttack(character.special[i]);
+    expect(Object.keys(data[0]).length).toBe(4);
   }
 });
